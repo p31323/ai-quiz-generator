@@ -1,0 +1,6 @@
+{
+  "name": "AI Quiz Generator",
+  "description": "An application that generates professional quizzes in multiple languages from user-uploaded documents (PDF, DOCX, PPTX, TXT, images) using AI.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

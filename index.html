@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 考題神器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* New theme based on the user's image */
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f3f4f6; /* A light gray for light mode */
+            color: #111827; /* Dark text for light mode */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark {
+            background-color: #1c202a; /* Dark navy background from image */
+            color: #e5e7eb; /* Light gray text */
+        }
+
+        /* Scrollbar Styles */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        
+        /* Light Mode Scrollbar */
+        ::-webkit-scrollbar-track { background: #e5e7eb; }
+        ::-webkit-scrollbar-thumb { background: #9ca3af; border-radius: 4px; }
+        
+        /* Dark Mode Scrollbar */
+        body.dark ::-webkit-scrollbar-track { background: #2d3748; }
+        body.dark ::-webkit-scrollbar-thumb { background: #3d84c6; border-radius: 4px; } /* Blue accent */
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.12.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="dark"> <!-- Start in dark mode by default -->
+    <div id="root"></div>
+    <!-- External libraries for file processing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script>
+      if (window.pdfjsLib) {
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/docx-preview@0.1.15/dist/docx-preview.js"></script>
+    <script>window.docxPreview = window.docx;</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <script type="module" src="/bundle.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

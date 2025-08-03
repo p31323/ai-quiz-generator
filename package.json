@@ -1,11 +1,10 @@
-
 {
   "name": "ai-quiz-generator",
   "version": "1.0.0",
   "description": "An application that generates professional quizzes in multiple languages from user-uploaded documents (PDF, DOCX, PPTX, TXT, images) using AI.",
   "private": true,
   "scripts": {
-    "build": "esbuild index.tsx --bundle --outfile=bundle.js --minify --platform=browser --format=esm --jsx=automatic --external:react --external:react-dom/client --external:@google/genai"
+    "build": "esbuild index.tsx --bundle --outfile=bundle.js --minify --platform=browser --format=esm --jsx=automatic --external:react --external:react-dom/client --external:@google/genai --define:process.env.API_KEY='\"'$API_KEY'\"'"
   },
   "devDependencies": {
     "esbuild": "^0.21.4"
